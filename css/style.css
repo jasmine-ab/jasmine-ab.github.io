@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Regular.ttf');
+    src:
+        url('../fonts/Manrope-Regular.ttf') format('truetype'),
+        url('../fonts/Manrope-Bold.ttf') format('truetype'),
+        url('../fonts/Manrope-ExtraBold.ttf') format('truetype'),
+        url('../fonts/Manrope-ExtraLight.ttf') format('truetype'),
+        url('../fonts/Manrope-Light.ttf') format('truetype'),
+        url('../fonts/Manrope-Medium.ttf') format('truetype'),
+        url('../fonts/Manrope-SemiBold.ttf') format('truetype');
+}
+
+
+:root {
+    font-size: 16px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Manrope', serif;
+}
+
+.container {
+    padding: 0 16px;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+header {
+    padding: 24px 0;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo {
+    margin-right: auto;
+    width: 120px;
+}
+
+.navbar nav {
+    padding: 10px;
+    padding-right: 32px;
+    display: flex;
+    gap: 40px;
+    border-right: 1px solid #939191;
+}
+
+.navbar nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar .nav-extra {
+    display: flex;
+    gap: 10px;
+    padding-left: 32px;
+}
+
+.navbar .nav-extra .phone {
+    height: 40px;
+    width: 40px;
+    background-color: #61C3A1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+}
+
+.navbar .nav-extra .words {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.navbar .nav-extra .words span:nth-child(2) {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.section-one {
+    margin-top: 80px;
+}
+
+.section-one-cont {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.section-one-cont .left {
+    width: 50%;
+}
+
+.section-one-cont .left h1 {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 74px;
+    margin-bottom: 32px;
+}
+
+.section-one-cont .right {
+    width: 50%;
+    position: relative;
+}
+
+.section-one-cont .text {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.section-one-cont .text i {
+    color: #E2E6E9;
+    font-size: 30px;
+}
+
+.section-one-cont .text p span {
+    display: block;
+}
+
+.section-one-cont .text p span:nth-child(1) {
+    color: #939191;
+    font-weight: 500;
+}
+
+.section-one-cont .text p span:nth-child(2) {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1E1B1B;
+}
+
+
+.section-one-cont .right img {
+    width: 100%;
+}
+
+.twenty-four {
+    background-color: #fff;
+    width: max-content;
+    padding: 15px;
+    border-radius: 59px;
+    box-shadow: 0px 0px 0px 10px #1e1b1b35;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    top: 50px;
+    left: -10px;
+    position: absolute;
+}
+
+.twenty-four p:nth-child(1) {
+    background-color: #61C3A1;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.twenty-four > p:nth-child(1) span:first-child {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.twenty-four p:nth-child(2) {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+.rating {
+    background-color: #fff;
+    width: max-content;
+    padding: 15px 30px;
+    border-radius: 59px;
+    box-shadow: 0px 0px 0px 10px #1e1b1b35;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    bottom: 50px;
+    right: -10px;
+    position: absolute;
+}
+
+.rating > span:nth-child(1) {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.rating > span:nth-child(1) > span:nth-child(1) {
+    font-weight: 500;
+}
+
+.rating > span:nth-child(2) {
+    color: #FFB648;
+}
+
+/* BUTTON */
+
+.button {
+    padding: 16px 40px;
+    border: none;
+    background-color: #E2E6E9;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.button-orange {
+    color: #fff;
+    background-color: #FF6433;
+}
