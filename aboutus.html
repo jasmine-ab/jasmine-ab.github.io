@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- bootstrap icon  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,400;1,700&family=Playfair+Display:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- custom styles -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="border-bottom border-info-emphasis">
+        <nav class="navbar navbar-expand-lg shadow-sm position-fixed w-100 index bg-white">
+            <div class="container-sm">
+                <a class="navbar-brand fs-3" href="#">Gourmet au Catering</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto align-items-center fs-5">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <button class="btn bg-col rounded-pill text-white px-3" type="submit">Book a
+                                    Table</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main class="">
+        <div class="hero d-flex align-items-end w-100 h-100" data-aos="fade-in" data-aos-easing="linear">
+            <div class="p-4 opacity-75">
+                <h1>Le Catering</h1>
+            </div>
+        </div>
+        <div class="container-sm" data-aos="fade-up" data-aos-duration="3000">
+            <div class="row py-5">
+                <div class="col-lg-6">
+                    <img class="w-100" src="./assets/images/tablesetting2.jpg" alt="aboutus">
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <h3 class="text-center pb-5 text-col fs-1">About Catering</h3>
+                        <p class="pb-1 fs-5 text-center">Tradition since 1889</p>
+                        <p>The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit
+                            esse cillum dolore eu fugiat nulla pariatur.We only use seasonal ingredients.
+                        </p>
+                        <p class="text-secondary">
+
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim
+                            id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et
+                            dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip
+                            ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-dark mt-5 py-5">
+        <div class="container">
+            <div class="py-5 text-white">
+                <div class="row gx-5 gy-5">
+                    <div class="col-lg-4">
+                        <p class="d-flex">
+                            <i class="bi bi-geo-alt fs-3"></i>
+                            <span class="ps-2">
+                                <span class="fw-bold d-block"> Address</span>
+                                <span class="text-secondary pt-3">A108 Adam Street
+                                    New York, NY 535022 - US</span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p class="d-flex">
+                            <i class="bi bi-telephone fs-3"></i>
+                            <span class="ps-2">
+                                <span class="fw-bold d-block">Contact</span>
+                                <span class="text-secondary pt-3">
+                                    Phone: +1 5589 55488 55 <br />
+                                    Email: info@example.com
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p class="d-flex">
+                            <i class="bi bi-clock fs-3"></i>
+                            <span class="ps-2">
+                                <span class="fw-bold d-block">Opening Hours</span>
+                                <span class="text-secondary pt-3">
+                                    Mon-Sat: 11AM - 23PM <br />
+                                    Sunday: Closed
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-light-subtle py-3 text-center">
+                <p class="text-white">
+                    &copy;
+                    Copyright Yummy. All Rights Reserved
+                    Designed by BootstrapMade
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
