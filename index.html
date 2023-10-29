@@ -1,333 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <!-- bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- bootstrap icon  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- boxicon -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,400;1,700&family=Playfair+Display:wght@400;500;700;800&display=swap"
-        rel="stylesheet">
-    <!-- aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- custom styles -->
-    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasmine Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
-<body>
-    <header class="border-bottom border-info-emphasis">
-        <nav class="navbar navbar-expand-lg shadow-sm position-fixed w-100 index bg-white">
-            <div class="container-sm">
-                <a class="navbar-brand fs-3" href="#">Gourmet au Catering</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ms-auto align-items-center fs-5">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="aboutus.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <button class="btn bg-col rounded-pill text-white px-3" type="submit">Book a
-                                    Table</button>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<body class="min-h-screen flex flex-col bg-blue-600">
+    <header class="py-4">
+        <div class="px-4 lg:w-5/6 mx-auto">
+            <nav class="flex flex-col lg:flex-row items-center">
+                <span class="font-semibold text-white text-2xl mb-4 lg:text-4xl lg:mb-0">Jasmine Quiz Application</span>
+                <ul class="flex items-center lg:ml-auto space-x-4">
+                    <li class="text-white hover:text-gray-200 text-gray-200"><a href="/">Home</a></li>
+                    <li class="text-white hover:text-gray-200"><a href="about.html">About</a></li>
+                    <li class="text-white hover:text-gray-200"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
 
-    <!-- hero -->
-    <main class="" data-aos="fade-in" data-aos-easing="linear">
-        <div class="home-hero hero d-flex align-items-end">
-            <div class="p-4 opacity-75">
-                <h1>Le Catering</h1>
+    <main class="mt-auto flex flex-col items-center justify-center p-4">
+        <div class="card bg-white shadow-lg rounded-lg w-full md:w-5/6 lg:w-2/4">
+            <div class="card-header p-5 py-3 flex items-center shadow ">
+                <h1 class="mr-auto font-semibold" id="title">Pop Quiz</h1>
+                <span class="border-none bg-blue-200 rounded-md px-3 py-1.5 text-blue-600">Score
+                    <span class="bg-slate-800 rounded px-2 py-0.5 text-white" id="score">00/20</span></span>
+            </div>
+            <div class="card-body p-5">
+                <h1 id="question" class="font-bold"></h1>
+                <div class="mt-5" id="optionsContainer">
+                    <!-- <label for="optionOne" class="border bg-sky-50 border-sky-200 rounded-md px-3 py-1.5 flex items-center" id="labelOne">
+                        <input type="radio" name="q-one" value="python" class="mr-2" id="optionOne" data-value="option">
+                        Python 
+                    </label>
+                    <label for="optionTwo" class="border bg-sky-50 border-sky-200 rounded-md px-3 py-1.5 mt-3 flex items-center">
+                        <input type="radio" name="q-one" value="javascript" class="mr-2" id="optionTwo" data-value="option">
+                        JavaScript
+                        </label>
+                    <label for="optionThree" class="border bg-sky-50 border-sky-200 rounded-md px-3 py-1.5 mt-3 flex items-center">
+                        <input type="radio" name="q-one" value="javascript" class="mr-2" id="optionThree" data-value="option">
+                        C++
+                    </label> -->
+                </div>
+            </div>
+            <div class="card-bottom flex flex-wrap items-center p-5 mt-14">
+                <p class="font-semibold" id="questionCount"></p>
+                <div class="ml-auto flex items-center space-x-2">
+                    <button id="submitButton"
+                        class="border-none bg-green-600 rounded-md px-3 py-1.5 text-white">Submit</button>
+                    <button id="nextButton" class="border-none bg-blue-600 rounded-md px-3 py-1.5 text-white">Next
+                        Question</button>
+                </div>
             </div>
         </div>
     </main>
 
-    <!-- features -->
-    <section class="bg-secondary-subtle py-5">
-        <div class="container text-center" data-aos="fade-up" data-aos-duration="3000">
-            <h1 class="text-col fw-medium mb-5">Why Choose <span>Le Catering</span>?</h1>
-            <div class="row gy-4 gx-5">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card mx-auto shadow py-5 border-0 card-zoom">
-                        <div class="rounded-circle i-bg-col icon mx-auto py-1">
-                            <i class="bi bi-clipboard-data fs-1 text-col"></i>
-                        </div>
-                        <div class="card-body" style="font-family: 'Playfair Display', serif;">
-                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Menu</h5>
-                            <p class="card-text" style="font-family: 'Playfair Display', serif;">A successful menu is
-                                simple, fresh, and has delicious options for you. Kids are kept in mind while planning
-                                our menu. Families are an integral part of our resturant.
-                            </p>
-                            <a href="#" class="btn bg-col text-white rounded-pill px-4">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card mx-auto shadow py-5 border-0 card-zoom">
-                        <div class="rounded-circle i-bg-col icon mx-auto py-1">
-                            <i class="bi bi-gem fs-1 text-col"></i>
-                        </div>
-                        <div class="card-body" style="font-family: 'Playfair Display', serif;">
-                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Great Food</h5>
-                            <p class="card-text" style="font-family: 'Playfair Display', serif;">One of the main element
-                                of our resturant is a unique dining experience. And consistently excellent food is why
-                                we earned a coveted Michelin star.
-                            </p>
-                            <a href="#" class="btn bg-col text-white rounded-pill px-4">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 offset-md-3 offset-lg-0 col-lg-4">
-                    <div class="card mx-auto shadow py-5 border-0 card-zoom">
-                        <div class="rounded-circle i-bg-col icon mx-auto py-1">
-                            <i class="bi bi-inboxes fs-1 text-col"></i>
-                        </div>
-                        <div class="card-body" style="font-family: 'Playfair Display', serif;">
-                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Prioritized Hygiene
-                            </h5>
-                            <p class="card-text" style="font-family: 'Playfair Display', serif;">Hygiene and Cleanliness
-                                ... The entire facility is kept spotlessly clean. Eating areas are always wiped clean
-                                frequently.
-                                of the card's content.</p>
-                            <a href="#" class="btn bg-col text-white rounded-pill px-4">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <footer class="mt-auto py-5 text-center text-slate-200">Jasmine Quiz Application &copy; 2023</footer>
 
-    <!-- Testimonials -->
-    <section class="py-5">
-        <div class="py-3 container-sm" data-aos="fade-up" data-aos-duration="1000">
-            <h1 class="text-center">TESTIMONIALS</h1>
-            <p class="text-center fs-2 fst-italic text-col" style="font-family: 'Playfair Display', serif;">WHAT ARE
-                THEY SAYING ABOUT US</p>
-        </div>
-
-        <div id="carouselExampleSlidesOnly" class="carousel slide p-5 container-sm " data-bs-ride="carousel"
-            data-aos="fade-up" data-aos-duration="3000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="d-flex align-items-center justify-content-center">
-                        <div class="w-75">
-                            <p class="fs-4" style="font-family: 'Playfair Display', serif;"><i
-                                    class='bx bxs-quote-left text-col fs-4'></i>&emsp;
-                                I had a wonderful experience at <span class="text-col">Le Catering</span>, their service
-                                is top notch and their
-                                food?..Delicious.&emsp;<i class='bx bxs-quote-right text-col fs-4'></i>
-                            </p>
-                            <div>
-                                <h3 class="fs-4" style="font-family: 'Playfair Display', serif;">Saul Goodman</h3>
-                                <p>Store Owner</p>
-                            </div>
-                            <div>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </div>
-                        </div>
-                        <div class="w-25 h-auto">
-                            <img src="./assets/images/testimonials-1.jpg" alt="testimonials-1"
-                                class="rounded-circle w-100">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="carousel-item">
-                    <div class="d-flex align-items-center justify-content-center">
-                        <div class="w-75">
-                            <p class="fs-4" style="font-family: 'Playfair Display', serif;"><i
-                                    class='bx bxs-quote-left text-col fs-4'></i>&emsp;
-                                As a mother, getting a nice place to have a wonderful time with my family is difficult
-                                but
-                                <span class="text-col">Le Catering</span> is my answered prayer.&emsp;<i
-                                    class='bx bxs-quote-right text-col fs-4'></i>
-                            </p>
-                            <div>
-                                <h3 class="fs-4" style="font-family: 'Playfair Display', serif;">Wuraola Adeniyi</h3>
-                                <p>Mother</p>
-                            </div>
-                            <div>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </div>
-                        </div>
-                        <div class="w-25 h-auto">
-                            <img src="./assets/images/testimonials-2.jpg" alt="testimonials-2"
-                                class="rounded-circle w-100">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="d-flex align-items-center justify-content-center">
-                        <div class="w-75">
-                            <p class="fs-4" style="font-family: 'Playfair Display', serif;"><i
-                                    class='bx bxs-quote-left text-col fs-4'></i>&emsp;
-                                The ambiance at <span class="text-col">Le catering</span> is breath-taking and worth
-                                every penny...I would be
-                                patronizing them again.&emsp;<i class='bx bxs-quote-right text-col fs-4'></i>
-                            </p>
-                            <div>
-                                <h3 class="fs-4" style="font-family: 'Playfair Display', serif;">Mary Jane</h3>
-                                <p>Enterpreneur</p>
-                            </div>
-                            <div>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </div>
-                        </div>
-                        <div class="w-25 h-auto">
-                            <img src="./assets/images/testimonials-3.jpg" alt="testimonials-3"
-                                class="rounded-circle w-100">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- call-to-action -->
-    <section class="bg-light mb-5">
-        <div class="container-sm">
-            <div class="text-center py-5">
-                <h1 class="fs-5" style="font-family: 'Playfair Display', serif;">BOOK A TABLE</h1>
-                <p class="fs-1 text-col">BOOK YOUR STAY WITH US</p>
-            </div>
-            <div class="row gx-5 gy-5">
-                <div class="col-lg-4">
-                    <img class="contact-img w-100" src="./assets/images/reservation.jpg" alt="reservation"
-                        data-aos="fade-right" data-aos-duration="2000" />
-                </div>
-                <div class="col-lg-8">
-                    <div class="d-flex flex-column h-100 align-items-center justify-content-center">
-                        <div class="row gx-5 gy-5 mb-5">
-                            <div class="col-lg-4">
-                                <input type="text" class="form-control form-control-lg" placeholder="Your name" />
-                            </div>
-                            <div class="col-lg-4">
-                                <input type="text" class="form-control form-control-lg" placeholder="Your Email" />
-                            </div>
-                            <div class="col-lg-4">
-                                <input type="text" class="form-control form-control-lg" placeholder="Your Phone" />
-                            </div>
-                            <div class="col-lg-4">
-                                <input type="text" class="form-control form-control-lg" placeholder="Date" />
-                            </div>
-                            <div class="col-lg-4">
-                                <input type="text" class="form-control form-control-lg" placeholder="Time" />
-                            </div>
-                            <div class="col-lg-4">
-                                <input type="text" class="form-control form-control-lg" placeholder="# of people" />
-                            </div>
-                            <div class="col-12">
-                                <textarea type="text" class="form-control form-control-lg"
-                                    placeholder="Message"></textarea>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary rounded-pill btn-lg over">Book a table</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- footer -->
-    <footer class="bg-dark mt-5 py-5">
-        <div class="container">
-            <div class="py-5 text-white">
-                <div class="row gx-5 gy-5">
-                    <div class="col-lg-4">
-                        <p class="d-flex">
-                            <i class="bi bi-geo-alt fs-3"></i>
-                            <span class="ps-2">
-                                <span class="fw-bold d-block"> Address</span>
-                                <span class="text-secondary pt-3">A108 Adam Street
-                                    New York, NY 535022 - US</span>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="col-lg-4">
-                        <p class="d-flex">
-                            <i class="bi bi-telephone fs-3"></i>
-                            <span class="ps-2">
-                                <span class="fw-bold d-block">Contact</span>
-                                <span class="text-secondary pt-3">
-                                    Phone: +1 5589 55488 55 <br />
-                                    Email: info@example.com
-                                </span>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="col-lg-4">
-                        <p class="d-flex">
-                            <i class="bi bi-clock fs-3"></i>
-                            <span class="ps-2">
-                                <span class="fw-bold d-block">Opening Hours</span>
-                                <span class="text-secondary pt-3">
-                                    Mon-Sat: 11AM - 23PM <br />
-                                    Sunday: Closed
-                                </span>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="border-top border-light-subtle py-3 text-center">
-                <p class="text-white">
-                    &copy;
-                    Copyright Yummy. All Rights Reserved
-                    Designed by BootstrapMade
-                </p>
-            </div>
-        </div>
-    </footer>
-
-
-
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script src="./questions.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

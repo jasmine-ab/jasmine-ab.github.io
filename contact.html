@@ -1,178 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <!-- bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- bootstrap icon  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,400;1,700&family=Playfair+Display:wght@400;500;700;800&display=swap"
-        rel="stylesheet">
-    <!-- aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- custom styles -->
-    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
-<body>
-    <!-- header -->
-    <header class="border-bottom border-info-emphasis">
-        <nav class="navbar navbar-expand-lg shadow-sm position-fixed w-100 index bg-white">
-            <div class="container-sm">
-                <a class="navbar-brand fs-3" href="#">Gourmet au Catering</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ms-auto align-items-center fs-5">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="aboutus.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <button class="btn bg-col rounded-pill text-white px-3" type="submit">Book a
-                                    Table</button>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<body class="min-h-screen flex flex-col bg-blue-600">
+    <header class="py-4">
+        <div class="px-4 lg:w-5/6 mx-auto">
+            <nav class="flex flex-col lg:flex-row items-center">
+                <span class="font-semibold text-white text-2xl mb-4 lg:text-4xl lg:mb-0">Jasmine Quiz Application</span>
+                <ul class="flex items-center lg:ml-auto space-x-4">
+                    <li class="text-white hover:text-gray-200"><a href="/">Home</a></li>
+                    <li class="text-white hover:text-gray-200"><a href="./about.html">About</a></li>
+                    <li class="text-white hover:text-gray-200 text-gray-200"><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
 
-    <!-- main -->
-    <main>
-        <div class="hero d-flex align-items-end w-100 h-100" data-aos="fade-in" data-aos-easing="linear">
-            <div class="p-4 opacity-75">
-                <h1>Le Catering</h1>
-            </div>
-        </div>
-        <div class="container-sm py-5" data-aos="fade-up" data-aos-duration="3000">
-            <div class="">
-                <h2 class="text-col fs-1 pb-5">Contact</h2>
-                <p>
-                    We offer full-service catering for any event, large or small. We understand your needs and we will
-                    cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to
-                    contact us.
-                </p>
+    <main class=" text-white">
+        <div class="px-4 lg:w-5/6 mx-auto">
 
-                <p class="fw-bold py-3">
-                    Catering Service, 42nd Living St, 43043 New York, NY
+
+            <h1 class="text-3xl font-semibold text-center py-6">Contact Jasmine Quiz Application</h1>
+
+            <section class=" p-6 mt-6">
+                <p class="text-lg">
+                    Have questions or suggestions for us? We'd love to hear from you. Feel free to reach out to our team
+                    at <a href="mailto:abe.temi98+quiz@gmail.com" class="text-sky-300">abe.temi98+quiz@gmail.com</a> with
+                    your feedback, ideas, or any inquiries you may have.
                 </p>
-                <p>
-                    You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a
-                    message here:
-                </p>
-            </div>
-            <div class="pt-5">
-                <div class="row gx-5 gy-5 mb-5">
-                    <div class="col-lg-4">
-                        <input type="text" class="form-control form-control-lg" placeholder="Your name" />
-                    </div>
-                    <div class="col-lg-4">
-                        <input type="text" class="form-control form-control-lg" placeholder="Your Email" />
-                    </div>
-                    <div class="col-lg-4">
-                        <input type="text" class="form-control form-control-lg" placeholder="Your Phone" />
-                    </div>
-                    <div class="col-lg-4">
-                        <input type="text" class="form-control form-control-lg" placeholder="Date" />
-                    </div>
-                    <div class="col-lg-4">
-                        <input type="text" class="form-control form-control-lg" placeholder="Time" />
-                    </div>
-                    <div class="col-lg-4">
-                        <input type="text" class="form-control form-control-lg" placeholder="# of people" />
-                    </div>
-                    <div class="col-12">
-                        <textarea type="text" class="form-control form-control-lg" placeholder="Message"></textarea>
-                    </div>
-                </div>
-                <button class="btn btn-primary rounded-pill btn-lg over">Send a message</button>
-            </div>
+            </section>
         </div>
     </main>
 
-    <!-- footer -->
-    <footer class="bg-dark mt-5 py-5">
-        <div class="container">
-            <div class="py-5 text-white">
-                <div class="row gx-5 gy-5">
-                    <div class="col-lg-4">
-                        <p class="d-flex">
-                            <i class="bi bi-geo-alt fs-3"></i>
-                            <span class="ps-2">
-                                <span class="fw-bold d-block"> Address</span>
-                                <span class="text-secondary pt-3">A108 Adam Street
-                                    New York, NY 535022 - US</span>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="col-lg-4">
-                        <p class="d-flex">
-                            <i class="bi bi-telephone fs-3"></i>
-                            <span class="ps-2">
-                                <span class="fw-bold d-block">Contact</span>
-                                <span class="text-secondary pt-3">
-                                    Phone: +1 5589 55488 55 <br />
-                                    Email: info@example.com
-                                </span>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="col-lg-4">
-                        <p class="d-flex">
-                            <i class="bi bi-clock fs-3"></i>
-                            <span class="ps-2">
-                                <span class="fw-bold d-block">Opening Hours</span>
-                                <span class="text-secondary pt-3">
-                                    Mon-Sat: 11AM - 23PM <br />
-                                    Sunday: Closed
-                                </span>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="border-top border-light-subtle py-3 text-center">
-                <p class="text-white">
-                    &copy;
-                    Copyright Yummy. All Rights Reserved
-                    Designed by BootstrapMade
-                </p>
-            </div>
-        </div>
-    </footer>
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <footer class="mt-auto py-5 text-center text-slate-200">Jasmine Quiz Application &copy; 2023</footer>
 </body>
 
 </html>
